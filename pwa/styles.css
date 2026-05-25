@@ -375,7 +375,7 @@ h1 {
 
 .info-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: clamp(10px, 1.7vw, 18px);
 }
 

@@ -1,6 +1,5 @@
 const els = {
   clock: document.querySelector("#clock"),
-  infoTime: document.querySelector("#infoTime"),
   speed: document.querySelector("#speed"),
   speedNeedle: document.querySelector("#speedNeedle"),
   lean: document.querySelector("#lean"),
@@ -38,7 +37,6 @@ function updateClock() {
     hour12: false,
   }).format(new Date());
   els.clock.textContent = value;
-  els.infoTime.textContent = value;
 }
 
 function renderSpeed(speedKph) {
