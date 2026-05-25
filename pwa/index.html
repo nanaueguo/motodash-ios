@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#090b0d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MotoDash" />
+    <title>MotoDash</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.svg" />
+    <link rel="icon" href="./icons/icon-192.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="dashboard" aria-label="MotoDash 骑行仪表盘">
+      <header class="topbar">
+        <div class="clock" id="clock">--:--</div>
+        <div class="top-actions">
+          <button class="pill button" id="wakeLockButton" type="button" aria-pressed="false">
+            <span class="icon">◐</span>
+            <span>常亮</span>
+          </button>
+          <button class="pill button" id="calibrateButton" type="button">
+            <span class="icon">⌖</span>
+            <span>校准</span>
+          </button>
+          <div class="pill" id="gpsStatus">
+            <span class="dot"></span>
+            <span>GPS</span>
+          </div>
+          <div class="pill" id="motionStatus">
+            <span class="dot"></span>
+            <span>IMU</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="main-grid">
+        <section class="panel speed-panel" aria-labelledby="speedTitle">
+          <div class="panel-title" id="speedTitle">
+            <span class="symbol">◴</span>
+            <span>速度</span>
+          </div>
+          <div class="speed-readout">
+            <span id="speed">0</span>
+            <span class="unit">km/h</span>
+          </div>
+          <div class="chips">
+            <div class="chip">
+              <span>最高</span>
+              <strong id="maxSpeed">0</strong>
+              <span>km/h</span>
+            </div>
+            <div class="chip">
+              <span>平均</span>
+              <strong id="avgSpeed">0</strong>
+              <span>km/h</span>
+            </div>
+            <div class="chip">
+              <span>里程</span>
+              <strong id="distance">0.0</strong>
+              <span>km</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="right-column">
+          <section class="panel lean-panel" aria-labelledby="leanTitle">
+            <div class="panel-title" id="leanTitle">
+              <span class="symbol">∠</span>
+              <span>倾角</span>
+            </div>
+            <div class="lean-layout">
+              <div class="gauge" aria-hidden="true">
+                <div class="gauge-arc"></div>
+                <div class="gauge-fill" id="gaugeFill"></div>
+                <div class="needle" id="needle"></div>
+                <div class="hub"></div>
+              </div>
+              <div class="lean-number">
+                <span id="lean">0</span>
+                <span class="degree">°</span>
+                <small id="leanDirection">直立</small>
+              </div>
+            </div>
+          </section>
+
+          <section class="metrics-grid">
+            <article class="panel small-panel">
+              <span class="small-label">航向</span>
+              <div><strong id="heading">--</strong><span>°</span></div>
+            </article>
+            <article class="panel small-panel">
+              <span class="small-label">海拔</span>
+              <div><strong id="altitude">--</strong><span>m</span></div>
+            </article>
+            <article class="panel small-panel">
+              <span class="small-label">时长</span>
+              <div><strong id="duration">00:00</strong></div>
+            </article>
+            <article class="panel small-panel">
+              <span class="small-label">精度</span>
+              <div><strong id="accuracy">--</strong><span>m</span></div>
+            </article>
+          </section>
+        </section>
+      </section>
+
+      <footer class="bottom-bar">
+        <button class="primary-button" id="startButton" type="button">开始骑行</button>
+        <p id="message">首次使用请允许定位和动作传感器权限。</p>
+      </footer>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
