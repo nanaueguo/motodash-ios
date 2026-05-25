@@ -148,7 +148,7 @@ h1 {
 }
 
 .speed-svg {
-  width: min(100%, 62vh);
+  width: min(100%, 82vh);
   max-height: 100%;
   overflow: visible;
 }
@@ -207,21 +207,21 @@ h1 {
 .speed-value {
   position: absolute;
   left: 50%;
-  top: 54%;
+  top: 53%;
   transform: translate(-50%, -50%);
   display: grid;
   justify-items: center;
 }
 
 #speed {
-  font-size: clamp(74px, 18vw, 174px);
+  font-size: clamp(44px, 10vw, 96px);
   font-weight: 950;
   line-height: 0.78;
   font-variant-numeric: tabular-nums;
 }
 
 .speed-value small {
-  margin-top: clamp(6px, 1.2vh, 12px);
+  margin-top: clamp(2px, 0.6vh, 6px);
   color: var(--muted);
   font-size: clamp(16px, 3vw, 30px);
   font-weight: 950;
@@ -438,6 +438,18 @@ button:active {
 
   .info-card {
     min-height: 72px;
+  }
+
+  .speed-svg {
+    width: min(100%, 88vh);
+  }
+
+  .speed-value {
+    top: 52%;
+  }
+
+  #speed {
+    font-size: clamp(44px, 10vw, 68px);
   }
 
   .lean-card {

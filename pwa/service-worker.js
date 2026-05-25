@@ -1,9 +1,9 @@
-const CACHE_NAME = "motodash-pwa-v11";
+const CACHE_NAME = "motodash-pwa-v13";
 const ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=11",
-  "./app.js?v=11",
+  "./styles.css?v=13",
+  "./app.js?v=13",
   "./manifest.webmanifest",
   "./icons/icon-192.svg",
   "./icons/icon-512.svg",
