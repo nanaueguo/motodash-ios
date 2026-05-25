@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.svg" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=9" />
+    <link rel="stylesheet" href="./styles.css?v=11" />
   </head>
   <body>
     <main class="shell" aria-label="MotoDash 骑行仪表盘">
@@ -72,13 +72,17 @@
                   <text x="232" y="157">R</text>
                 </svg>
                 <div class="moto-pointer" id="leanPointer" aria-hidden="true">
-                  <svg viewBox="0 0 150 72">
-                    <circle cx="38" cy="50" r="15" />
-                    <circle cx="112" cy="50" r="15" />
-                    <path d="M38 50h26l18-22h22l8 22" />
-                    <path d="M72 28l-16 22" />
-                    <path d="M98 28l24-12" />
-                    <path d="M119 16h14" />
+                  <svg viewBox="0 0 150 150">
+                    <path class="mirror left" d="M57 49L24 31l-13 6 31 25" />
+                    <path class="mirror right" d="M93 49l33-18 13 6-31 25" />
+                    <path class="tail-body" d="M45 58L58 30h34l13 28-17 26H62z" />
+                    <path class="seat" d="M58 30h34l-7-13H65z" />
+                    <path class="tail-light left" d="M50 61h19" />
+                    <path class="tail-light right" d="M81 61h19" />
+                    <path class="tire" d="M57 82c0-19 8-31 18-31s18 12 18 31v35c0 18-8 27-18 27s-18-9-18-27z" />
+                    <path class="tire-groove" d="M75 58v82" />
+                    <path class="side-fin left" d="M46 86l-27 20M46 98l-27 20M46 110l-24 18" />
+                    <path class="side-fin right" d="M104 86l27 20M104 98l27 20M104 110l24 18" />
                   </svg>
                 </div>
                 <div class="lean-readout">
@@ -109,6 +113,6 @@
       </section>
     </main>
 
-    <script src="./app.js?v=9" type="module"></script>
+    <script src="./app.js?v=11" type="module"></script>
   </body>
 </html>
